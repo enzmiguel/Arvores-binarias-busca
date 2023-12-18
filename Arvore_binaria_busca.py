@@ -1,7 +1,7 @@
 class Elemento: # Cria a classe do nó (chamado elemento para deixar mais claro).
     def __init__(self): # Método construtor do nó, utilizado para instanciá-lo.
-        self.valor = 0
-        self.dir = None
+        self.valor = 0 # Definindo os valores padrão dos atributos da classe (0 e None). 
+        self.dir = None 
         self.esq = None
 
 def busca(chave, pont, pai=None):  # Adicione o parâmetro pai com o valor padrão None.
