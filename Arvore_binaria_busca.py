@@ -1,5 +1,5 @@
-class Elemento:
-    def __init__(self):
+class Elemento: # Cria a classe do nó (chamado elemento para deixar mais claro).
+    def __init__(self): # Método construtor do nó, utilizado para instanciá-lo.
         self.valor = 0
         self.dir = None
         self.esq = None
@@ -27,7 +27,6 @@ def busca(chave, pont, pai=None):  # Adicione o parâmetro pai com o valor padr�
                     pont, f, aux = busca(chave, pont)  # Recursivamente continua a busca no filho direito.
     return pont, f, pai
 
-
 def inclusao(chave, raiz):
     pont, flag, pai = busca(chave, raiz) # Realiza a busca que retorna respectivamente o último ponteiro buscado e sua flag.
     if flag == 1: # Se a flag = 1, o valor já está na árvore e não é possível repetí-lo.
@@ -49,7 +48,6 @@ def inclusao(chave, raiz):
         print('Elemento incluído!') # Informa a inclusão devida do elemento.
         print()
     return raiz # Retorna o valor atualizado da raiz.
-
 
 def exclusao(chave, raiz):
     raiz, flag = exclusao_recursiva(chave, raiz)
@@ -100,7 +98,6 @@ def exclusao_recursiva(chave, pont):
     # Retorna o nó atual e a flag para indicar se a exclusão ocorreu.
     # Obs.: as verificações acima servem para saber se o nó a ser removido possui sub-árvores. Se for o caso, a substituição pode ser diferente.
     return pont, flag
-
 
 def valor_min(pont):
     while pont.esq is not None: # Enquanto existir um filho a esquerda do ponteiro atual, seu valor será atualizado como seu filho esquerdo.
